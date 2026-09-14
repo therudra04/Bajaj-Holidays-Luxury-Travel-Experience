@@ -17,11 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Custom Font Styles -->
-  <style>
-    .font-serif-brand { font-family: 'Cinzel', Georgia, serif; }
-    .font-sans-brand { font-family: 'Plus Jakarta Sans', sans-serif; }
-    html { scroll-behavior: smooth; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#FAF9F6] text-stone-800 font-sans-brand antialiased selection:bg-[#D9232D] selection:text-white">
 
@@ -480,26 +476,6 @@
   </footer>
 
   <!-- Vanilla JS Interactive Scripts -->
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Mobile Navigation Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
-    });
-
-    // Close mobile menu on clicking links
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

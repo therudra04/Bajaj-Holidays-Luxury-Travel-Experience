@@ -1,0 +1,11 @@
+.font-serif-brand {
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-sans-brand {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
