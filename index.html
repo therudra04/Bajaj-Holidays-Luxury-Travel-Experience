@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bajaj Holidays | Luxury Travel Experience</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Font Styles -->
+  <style>
+    .font-serif-brand { font-family: 'Cinzel', Georgia, serif; }
+    .font-sans-brand { font-family: 'Plus Jakarta Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-[#FAF9F6] text-stone-800 font-sans-brand antialiased selection:bg-[#D9232D] selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-[#2A1838] text-white text-xs py-2 px-4 text-center tracking-wider font-light flex items-center justify-center gap-2">
+    <span class="bg-[#D9232D] text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest">Exclusive Offer</span>
+    <span>Book your luxury getaway today & unlock complimentary private concierge service.</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-[#FAF9F6]/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      
+      <!-- Brand Logo (Directly Embedded Image) -->
+      <a href="#" class="flex items-center gap-3">
+        <img 
+          src="Assets/bajajLogo.PNG" 
+          alt="Bajaj Holidays Logo" 
+          class="h-16 w-auto object-contain drop-shadow-sm" 
+          onerror="this.onerror=null; this.src='bjj logo.PNG';" 
+        /><span class="font-serif-brand font-bold text-xl sm:text-2xl text-[#2A1838] tracking-tight">
+            Bajaj <span class="text-[#D9232D]">Holidays</span>
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+        <a href="#destinations" class="hover:text-[#D9232D] transition-colors">Destinations</a>
+        <a href="#experiences" class="hover:text-[#D9232D] transition-colors">Experiences</a>
+        <a href="#curated" class="hover:text-[#D9232D] transition-colors">Curated Tours</a>
+        <a href="#about" class="hover:text-[#D9232D] transition-colors">About Us</a>
+        <a href="#reviews" class="hover:text-[#D9232D] transition-colors">Reviews</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-[#D9232D] hover:bg-red-700 text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide transition-all shadow-md">
+          <span>Plan My Trip</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <button id="menu-btn" class="md:hidden text-stone-800 p-2 focus:outline-none">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF9F6] border-b border-stone-200 px-6 py-6 flex-col gap-4 text-stone-800">
+      <a href="#destinations" class="py-2 border-b border-stone-200/60 font-medium hover:text-[#D9232D]">Destinations</a>
+      <a href="#experiences" class="py-2 border-b border-stone-200/60 font-medium hover:text-[#D9232D]">Experiences</a>
+      <a href="#curated" class="py-2 border-b border-stone-200/60 font-medium hover:text-[#D9232D]">Curated Tours</a>
+      <a href="#about" class="py-2 border-b border-stone-200/60 font-medium hover:text-[#D9232D]">About Us</a>
+      <a href="#reviews" class="py-2 border-b border-stone-200/60 font-medium hover:text-[#D9232D]">Reviews</a>
+      <a href="#contact" class="mt-2 text-center bg-[#D9232D] text-white py-3 rounded-xl font-bold">Plan My Trip</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[90vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <img 
+      src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=2000&q=80" 
+      alt="Luxury Resort Destination" 
+      class="absolute inset-0 w-full h-full object-cover opacity-35 scale-105" 
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-[#2A1838] via-transparent to-black/60"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+      <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Bespoke Luxury Journeys
+      </span>
+
+      <h1 class="font-serif-brand text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+        Crafting Extraordinarily <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-200 via-amber-200 to-rose-400">Personal Journeys</span>
+      </h1>
+
+      <p class="text-stone-300 text-lg sm:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+        Discover hand-curated escapes, private luxury villas, and tailored itineraries crafted around your dream travel experience.
+      </p>
+
+      <!-- Quick Search / Booking Widget -->
+      <div class="bg-white/95 backdrop-blur-md text-stone-800 p-4 sm:p-6 rounded-2xl shadow-2xl max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 text-left border border-white/20">
+        <div>
+          <label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">Destination</label>
+          <select class="w-full bg-stone-100 border border-stone-200 rounded-lg p-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#D9232D]">
+            <option>Switzerland & Alps</option>
+            <option>Maldives Private Islands</option>
+            <option>Amalfi Coast, Italy</option>
+            <option>Kyoto & Mount Fuji</option>
+            <option>Bali & Nusa Dua</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">Travel Style</label>
+          <select class="w-full bg-stone-100 border border-stone-200 rounded-lg p-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#D9232D]">
+            <option>Honeymoon & Romance</option>
+            <option>Private Villa Retreat</option>
+            <option>Cultural & Heritage</option>
+            <option>Adventure & Wellness</option>
+          </select>
+        </div>
+
+        <div class="flex items-end">
+          <a href="#contact" class="w-full bg-[#D9232D] hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="search" class="w-4 h-4"></i>
+            <span>Explore Escapes</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DESTINATIONS -->
+  <section id="destinations" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Handpicked Escapes</span>
+        <h2 class="font-serif-brand text-3xl sm:text-4xl font-bold text-[#2A1838]">World’s Most Coveted Destinations</h2>
+      </div>
+      <a href="#contact" class="text-[#2A1838] font-semibold text-sm hover:text-[#D9232D] inline-flex items-center gap-1 transition-colors">
+        Request Custom Destination <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-stone-200/60 hover:-translate-y-1 transition-all duration-300">
+        <div class="h-72 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?auto=format&fit=crop&w=800&q=80" alt="Santorini" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-[#2A1838] font-bold text-xs px-3 py-1 rounded-full">7 Days</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-1 text-amber-500 mb-2">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <span class="text-xs font-bold text-stone-700">4.9 (128 reviews)</span>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold text-[#2A1838] mb-2">Santorini & Cyclades</h3>
+          <p class="text-stone-600 text-sm font-light mb-4">Cliffside infinity pools, private catamaran cruises, and Aegean sunset wine tastings.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-xs text-stone-400 block">Starting from</span>
+              <span class="font-bold text-lg text-[#2A1838]">$3,499</span>
+            </div>
+            <a href="#contact" class="bg-stone-100 hover:bg-[#2A1838] hover:text-white text-[#2A1838] p-2.5 rounded-full transition-colors">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-stone-200/60 hover:-translate-y-1 transition-all duration-300">
+        <div class="h-72 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80" alt="Kyoto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-[#2A1838] font-bold text-xs px-3 py-1 rounded-full">10 Days</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-1 text-amber-500 mb-2">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <span class="text-xs font-bold text-stone-700">5.0 (94 reviews)</span>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold text-[#2A1838] mb-2">Kyoto & Alpine Ryokans</h3>
+          <p class="text-stone-600 text-sm font-light mb-4">Private tea ceremonies, traditional hot springs, and Bullet train luxury suites.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-xs text-stone-400 block">Starting from</span>
+              <span class="font-bold text-lg text-[#2A1838]">$4,850</span>
+            </div>
+            <a href="#contact" class="bg-stone-100 hover:bg-[#2A1838] hover:text-white text-[#2A1838] p-2.5 rounded-full transition-colors">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-stone-200/60 hover:-translate-y-1 transition-all duration-300">
+        <div class="h-72 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-[#2A1838] font-bold text-xs px-3 py-1 rounded-full">5 Days</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-1 text-amber-500 mb-2">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <span class="text-xs font-bold text-stone-700">4.9 (210 reviews)</span>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold text-[#2A1838] mb-2">Maldives Overwater Retreat</h3>
+          <p class="text-stone-600 text-sm font-light mb-4">Seaplane transfers, dedicated butler service, and private underwater dining.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-xs text-stone-400 block">Starting from</span>
+              <span class="font-bold text-lg text-[#2A1838]">$5,200</span>
+            </div>
+            <a href="#contact" class="bg-stone-100 hover:bg-[#2A1838] hover:text-white text-[#2A1838] p-2.5 rounded-full transition-colors">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES / WHY US -->
+  <section id="experiences" class="bg-[#2A1838] text-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Why Travel With Us</span>
+        <h2 class="font-serif-brand text-3xl sm:text-4xl font-bold mb-4">The Bajaj Touch</h2>
+        <p class="text-stone-300 font-light">We redefine luxury travel by focusing on seamless execution, total privacy, and bespoke experiences.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-[#D9232D]/20 text-[#D9232D] flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold mb-3">24/7 Dedicated Concierge</h3>
+          <p class="text-stone-300 text-sm font-light leading-relaxed">Your personal advisor handles room upgrades, reservations, and real-time adjustments smoothly.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-[#D9232D]/20 text-[#D9232D] flex items-center justify-center mb-6">
+            <i data-lucide="plane" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold mb-3">VIP Transfers & Fast-Track</h3>
+          <p class="text-stone-300 text-sm font-light leading-relaxed">Airport lounge access, fast-track security, and luxury chauffeured rides from door to door.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-[#D9232D]/20 text-[#D9232D] flex items-center justify-center mb-6">
+            <i data-lucide="map-pin" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-serif-brand text-xl font-bold mb-3">Exclusive Private Access</h3>
+          <p class="text-stone-300 text-sm font-light leading-relaxed">Private museum tours after hours, yacht charters, and invitations to secret regional dining spots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURATED TOURS -->
+  <section id="curated" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Signature Itineraries</span>
+      <h2 class="font-serif-brand text-3xl sm:text-4xl font-bold text-[#2A1838]">Curated Signature Journeys</h2>
+      <p class="text-stone-600 font-light mt-2">Fully customizable packages designed by our senior travel architects.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Tour 1 -->
+      <div class="flex flex-col sm:flex-row bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-md">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Swiss Alps" class="sm:w-1/2 h-64 sm:h-auto object-cover" />
+        <div class="p-6 flex flex-col justify-between sm:w-1/2">
+          <div>
+            <span class="bg-[#2A1838] text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded mb-3 inline-block">Best Seller</span>
+            <h3 class="font-serif-brand text-xl font-bold text-[#2A1838] mb-2">Grand Swiss Glacier Express</h3>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">First-class train passes, luxury chalet stay in Zermatt, and helicopter ride over Matterhorn.</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 text-xs font-semibold text-stone-500 mb-4">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4 text-[#D9232D]"></i> 8 Days</span>
+              <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4 text-[#D9232D]"></i> Private Group</span>
+            </div>
+            <a href="#contact" class="block text-center bg-[#2A1838] hover:bg-[#D9232D] text-white py-2.5 rounded-lg text-xs font-bold transition-colors">Book Package</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="flex flex-col sm:flex-row bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-md">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali Luxury" class="sm:w-1/2 h-64 sm:h-auto object-cover" />
+        <div class="p-6 flex flex-col justify-between sm:w-1/2">
+          <div>
+            <span class="bg-[#D9232D] text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded mb-3 inline-block">Wellness Special</span>
+            <h3 class="font-serif-brand text-xl font-bold text-[#2A1838] mb-2">Ubud & Uluwatu Villa Sanctum</h3>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">Private pool villas, holistic spa sessions, floating breakfast, and private cliffside dining.</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 text-xs font-semibold text-stone-500 mb-4">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4 text-[#D9232D]"></i> 6 Days</span>
+              <span class="flex items-center gap-1"><i data-lucide="heart" class="w-4 h-4 text-[#D9232D]"></i> Couples Only</span>
+            </div>
+            <a href="#contact" class="block text-center bg-[#2A1838] hover:bg-[#D9232D] text-white py-2.5 rounded-lg text-xs font-bold transition-colors">Book Package</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="bg-stone-100 py-24 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Our Story</span>
+        <h2 class="font-serif-brand text-3xl sm:text-4xl font-bold text-[#2A1838] mb-6">Creating Unforgettable Journeys Since 2010</h2>
+        <p class="text-stone-600 leading-relaxed font-light mb-6">
+          At Bajaj Holidays, travel isn't just about reaching a destination—it’s about the seamless elegance of the experience. Over the past 15 years, we have built trusted relationships with five-star resorts, private island owners, and luxury aviation partners worldwide.
+        </p>
+        <p class="text-stone-600 leading-relaxed font-light mb-8">
+          Whether you are planning an intimate honeymoon, a multi-generational family holiday, or an adventurous private expedition, our travel designers meticulously plan every second.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-stone-300">
+          <div>
+            <span class="font-serif-brand text-3xl font-bold text-[#2A1838] block">15+</span>
+            <span class="text-xs text-stone-500 font-medium uppercase tracking-wider">Years Experience</span>
+          </div>
+          <div>
+            <span class="font-serif-brand text-3xl font-bold text-[#2A1838] block">10,000+</span>
+            <span class="text-xs text-stone-500 font-medium uppercase tracking-wider">Happy Travelers</span>
+          </div>
+          <div>
+            <span class="font-serif-brand text-3xl font-bold text-[#2A1838] block">99.4%</span>
+            <span class="text-xs text-stone-500 font-medium uppercase tracking-wider">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1000&q=80" alt="Luxury Travel Planning" class="rounded-3xl shadow-2xl w-full object-cover h-[450px]" />
+        <div class="absolute -bottom-6 -left-6 bg-[#2A1838] text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+          <p class="font-serif-brand font-bold text-lg mb-1">Tailored Perfection</p>
+          <p class="text-xs text-stone-300">Every itinerary is customized to match your preferences and pace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section id="reviews" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Testimonials</span>
+      <h2 class="font-serif-brand text-3xl sm:text-4xl font-bold text-[#2A1838]">What Our Travelers Say</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-stone-200/80">
+        <div class="flex text-amber-400 mb-4">
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        </div>
+        <p class="text-stone-600 text-sm italic font-light mb-6">"Bajaj Holidays planned our 10th anniversary trip to Switzerland. Everything from airport meet-and-greet to private train cabins was flawless!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#2A1838] text-white flex items-center justify-center font-bold text-sm">RK</div>
+          <div>
+            <h4 class="font-bold text-sm text-[#2A1838]">Rajesh & Kavita Kapoor</h4>
+            <span class="text-xs text-stone-400">Traveled to Switzerland</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-stone-200/80">
+        <div class="flex text-amber-400 mb-4">
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        </div>
+        <p class="text-stone-600 text-sm italic font-light mb-6">"The concierge service in Maldives was outstanding. When our flight got delayed, they rearranged our seaplane transfer within minutes."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#D9232D] text-white flex items-center justify-center font-bold text-sm">AM</div>
+          <div>
+            <h4 class="font-bold text-sm text-[#2A1838]">Ananya Mehta</h4>
+            <span class="text-xs text-stone-400">Traveled to Maldives</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-stone-200/80">
+        <div class="flex text-amber-400 mb-4">
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        </div>
+        <p class="text-stone-600 text-sm italic font-light mb-6">"True VIP treatment! Our private dinner inside a Japanese temple in Kyoto was the highlight of our lives. Will book every vacation with Bajaj."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#2A1838] text-white flex items-center justify-center font-bold text-sm">VS</div>
+          <div>
+            <h4 class="font-bold text-sm text-[#2A1838]">Vikram & Sunita</h4>
+            <span class="text-xs text-stone-400">Traveled to Japan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / TRIP CONSULTATION FORM -->
+  <section id="contact" class="bg-[#2A1838] text-white py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-[#D9232D] font-bold text-xs uppercase tracking-widest block mb-2">Start Planning</span>
+      <h2 class="font-serif-brand text-3xl sm:text-5xl font-bold mb-4">Let’s Design Your Dream Vacation</h2>
+      <p class="text-stone-300 font-light mb-12">Fill out the form below and one of our travel specialists will contact you within 2 hours.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your luxury travel inquiry has been received. Our concierge will contact you shortly.');" class="bg-white text-stone-800 p-8 rounded-3xl shadow-2xl text-left grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs font-bold text-stone-600 uppercase mb-2">Full Name</label>
+          <input type="text" placeholder="John Doe" required class="w-full bg-stone-100 border border-stone-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9232D]" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-600 uppercase mb-2">Email Address</label>
+          <input type="email" placeholder="john@example.com" required class="w-full bg-stone-100 border border-stone-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9232D]" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-600 uppercase mb-2">Phone / WhatsApp</label>
+          <input type="tel" placeholder="+91 98765 43210" required class="w-full bg-stone-100 border border-stone-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9232D]" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-600 uppercase mb-2">Preferred Destination</label>
+          <input type="text" placeholder="e.g. Switzerland, Maldives, Europe" class="w-full bg-stone-100 border border-stone-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9232D]" />
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-xs font-bold text-stone-600 uppercase mb-2">Travel Notes / Preferences</label>
+          <textarea rows="4" placeholder="Tell us about your budget, number of travelers, dates, or special requests..." class="w-full bg-stone-100 border border-stone-200 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9232D]"></textarea>
+        </div>
+
+        <div class="md:col-span-2">
+          <button type="submit" class="w-full bg-[#D9232D] hover:bg-red-700 text-white font-bold py-4 rounded-xl text-base transition-all shadow-xl">
+            Submit Travel Inquiry
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+      <!-- <div class="flex items-center gap-3">
+        <img 
+          src="Assets/bajajLogo.PNG" 
+          alt="Bajaj Holidays Logo" 
+          class="h-10 w-auto object-contain brightness-0 invert" 
+          onerror="this.onerror=null; this.src='bjj logo.PNG';"
+        />
+      </div> -->
+
+      <p class="font-light">© 2026 Bajaj Holidays Ltd. All rights reserved.</p>
+
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS Interactive Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    // Close mobile menu on clicking links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>
